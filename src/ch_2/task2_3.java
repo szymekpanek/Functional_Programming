@@ -6,12 +6,12 @@ import java.util.Random;
 
 //using arrayList write a program that puts 10 random number and sort them.
 public class task2_3 {
-    private void array_creator (ArrayList<Integer> data){
+    void array_creator(ArrayList<Integer> data){
         Random rand = new Random();
         task2_3 task = new task2_3();
 
         for (int i = 0; i < 100; i++) {
-            data.add(rand.nextInt(100));
+            data.add(Integer.valueOf(String.valueOf(rand.nextInt(100))));
         }
 
         System.out.println("Unsorted array:");
@@ -36,5 +36,8 @@ public class task2_3 {
         ArrayList<Integer> data = new ArrayList<>();
         task.array_creator(data);
         task.merge_sort(data);
+    }
+
+    public void sort_array(ArrayList<String> data) {
     }
 }
